@@ -71,3 +71,25 @@ SELECT
     salary,
     MAX(salary) OVER (PARTITION BY department_name) AS 'Highest_Dept_Sal'
 FROM v_FullEmpData;
+
+---
+
+## 🧰 **Tools Used**
+
+- 🖥️ **SQL Server Management Studio (SSMS)** / **Microsoft SQL Server**  
+  Used for writing, testing, and executing SQL queries, creating database objects, and optimizing performance.  
+
+- 🔧 **Git & GitHub**  
+  Used for version control, documentation, and sharing this project as part of my SQL portfolio.
+
+---
+
+## 👨‍💻 **Author**
+**Priyasi Shah**  
+
+📧 mailto:shahpriyasi1111@gmail.com
+
+💼 https://www.linkedin.com/in/priyasi-shah/
+
+🌐 https://github.com/PriyasiShah1211
+

@@ -55,24 +55,6 @@ This project demonstrates **advanced SQL concepts** using the HR sample database
 
 ---
 
-## 💡 **Sample Query – Employee Salary Insights**
-
-**Goal:**  
-Compare each employee’s salary against the highest-paid person in their respective department.
-
-**Concepts Used:**  
-Aggregation, Window Functions
-
-```sql
-SELECT
-    employee_id,
-    email,
-    department_name,
-    salary,
-    MAX(salary) OVER (PARTITION BY department_name) AS 'Highest_Dept_Sal'
-FROM v_FullEmpData;
-
----
 
 ## 🧰 **Tools Used**
 
@@ -92,4 +74,24 @@ FROM v_FullEmpData;
 💼 https://www.linkedin.com/in/priyasi-shah/
 
 🌐 https://github.com/PriyasiShah1211
+
+---
+
+## 💡 **Sample Query – Employee Salary Insights**
+
+**Goal:**  
+Compare each employee’s salary against the highest-paid person in their respective department.
+
+**Concepts Used:**  
+Aggregation, Window Functions
+
+```sql
+SELECT
+    employee_id,
+    email,
+    department_name,
+    salary,
+    MAX(salary) OVER (PARTITION BY department_name) AS 'Highest_Dept_Sal'
+FROM v_FullEmpData
+
 

@@ -1,57 +1,73 @@
-ADVANCED SQL PORTFOLIO – HR DATABASE
+# 🧠 **Advanced SQL Portfolio – HR Database**
 
-1. About Me
-Hi! I am Priyasi Shah, an aspiring SQL Developer / Data Analyst passionate about turning raw data into insights. This repository showcases my SQL practice project built using HR sample database.
+### 📊 *Exploring Advanced SQL Concepts with a Realistic HR Scenario*
 
-2. Database Used
-HR Database – employee, department, and job data. It is a standard in-built database used to learn SQL.
+---
 
-3. About This Project
-This project uses the HR sample database to demonstrate advanced SQL concepts from Analytical Queries to Performance Optimization and Automation.
-It simulates an HR department’s data analysis needs - including employee details, department structures, salaries, and job roles.
+## 👩‍💻 **About Me**
 
-4. Objectives
-	1. Analyse salary and job trends
-	2. Automate calculations using triggers and user-defined functions
-	3. Improve performance using indexing
+Hi! I’m **Priyasi Shah**, an aspiring **SQL Developer / Data Analyst** passionate about transforming raw data into meaningful insights.  
 
-5. Repository Overview
-File : 01_Subqueries_DerivedTables_CTE
-Description : Advanced SQL script to work with Subqueries, Derived Tables, and Common Table Expressions (CTEs)
+This repository showcases my **SQL practice project** built using the **HR sample database** - focusing on analytical queries, performance tuning, and automation through database objects.
 
-File : 02_Views_WindowsFunctions_StoredProcedures
-Description : Advanced SQL script to work with Views, Windows Function, and Stored Procedures
+---
 
-File : 03_UDFs_Triggers_Indexing
-Description : Advanced SQL script to work with UDFs, Triggers, Indexes
+## 🗄️ **Database Used**
 
-File : HR_2_ERD
-Description : Highlights relationships between database entities
+**HR Database**  
+A standard in-built sample dataset used for learning SQL, containing details about:
+- Employees 👩‍💼  
+- Departments 🏢  
+- Jobs 💼  
 
-File : Screenshots
-Description : Sample output screenshots from executed queries
+It models a typical HR system with relationships between employees, job roles, and organizational departments.
 
-6. Sample Query - Employee Salary Insights
-Goal - Compare the salary of each employee against the salary of the highest paid person in their respective department.
-Concept/s used – Aggregation, Windows Function
+---
 
-	select	
-		employee_id, email, department_name, salary,max(salary) over(partition by department_name) as 'Highest_Dept_Sal'
-	from v_FullEmpData
+## 🎯 **About This Project**
 
-7. Tools Used
-	1. SQL Server Management Studio / MS SQL Server
-	2. Git & GitHub (for version control)
+This project demonstrates **advanced SQL concepts** using the HR sample database.  It simulates an **HR department’s analytics and data management needs**, covering:
 
-8. Skills Demonstrated
-	1. Query Optimization & Indexing
-	2. Analytical SQL (aggregations, subqueries, window functions)
-	3. Creating and Managing Views, Triggers, and UDFs
-	4. Writing Maintainable SQL Code
+- Employee details  
+- Department structures  
+- Salary and job role analytics  
+- Database automation through UDFs, triggers, and indexing  
 
-9. Connect With Me
-	1. LinkedIn: www.linkedin.com/in/priyasi-shah/
-	2. Email: shahpriyasi1111@gmail.com
-	3. GitHub: github.com/PriyasiShah1211
+---
 
+## 🧩 **Objectives**
 
+1. 📈 Analyze salary and job trends  
+2. ⚙️ Automate calculations using **triggers** and **user-defined functions (UDFs)**  
+3. 🚀 Improve query performance using **indexing and optimization**  
+
+---
+
+## 📂 **Repository Overview**
+
+| **File** | **Description** |
+|-----------|-----------------|
+| `01_Subqueries_DerivedTables_CTE.sql` | Advanced SQL script using Subqueries, Derived Tables, and Common Table Expressions (CTEs) |
+| `02_Views_WindowsFunctions_StoredProcedures.sql` | Implementation of Views, Window Functions, and Stored Procedures |
+| `03_UDFs_Triggers_Indexing.sql` | Scripts for creating User Defined Functions, Triggers, and Indexes |
+| `HR_2_ERD.png` | Entity Relationship Diagram illustrating database relationships |
+| `Screenshots/` | Folder containing output screenshots from executed queries |
+
+---
+
+## 💡 **Sample Query – Employee Salary Insights**
+
+**Goal:**  
+Compare each employee’s salary against the highest-paid person in their respective department.
+
+**Concepts Used:**  
+Aggregation, Window Functions
+
+```sql
+SELECT
+    employee_id,
+    email,
+    department_name,
+    salary,
+    MAX(salary) OVER (PARTITION BY department_name) AS 'Highest_Dept_Sal'
+FROM v_FullEmpData;
